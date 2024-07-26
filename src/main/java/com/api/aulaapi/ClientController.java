@@ -3,6 +3,9 @@ package com.api.aulaapi;
 import java.util.UUID;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 
@@ -49,7 +52,7 @@ public class ClientController {
     }
 
     // Deletar um cliente - delete
-    @PostMapping
+    @DeleteMapping
     public String delete(@RequestBody Cliente cliente) {
         Cliente.clientes.remove(cliente);
         return "Cliente removido com sucesso!";
